@@ -1,2 +1,2 @@
 - [Prepare Docker image and use it](https://github.com/jamalshahverdiev/dockerpythontask/tree/master/pythondockerapp)
-- [Use Kubernetes Yaml files](https://)
+- [Use Kubernetes Yaml files to deploy our app to the cluster](https://github.com/jamalshahverdiev/dockerpythontask/tree/master/kubefiles)
