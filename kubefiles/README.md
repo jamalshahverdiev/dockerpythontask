@@ -47,3 +47,14 @@ $ kubectl create -f pythoningress.yaml
 ```bash
 $ kubectl create -f nginx-ingress-controller-service.yaml -n=ingress
 ```
+
+##### Result must be like as the following:
+```bash
+$ curl -XGET http://nginxingress.loc/
+Success!
+$ curl -XGET http://nginxingress.loc/ping
+Ok
+```
+
+##### Or:
+![RESULT](images/RESULT.PNG)
