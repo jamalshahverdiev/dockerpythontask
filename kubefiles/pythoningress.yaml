@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: python-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+#    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: nginxingress.loc
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: python-service
+            servicePort: 8080
