@@ -43,6 +43,8 @@ $ kubectl create -f pythondockerpod.yaml
 $ kubectl create -f pythoningress.yaml
 ```
 
+`Note:` If you want use GoAPP inside of the Kubernetes cluster, just execute `kubectl create -f godockerpod.yaml` and `kubectl create -f goingress.yaml` commands.
+
 ##### At the end just execute the following command to create service with name `nginx-ingress` which exposes port `80` to our ingress controller which mapped our ingress rule in the port `8080`.
 ```bash
 $ kubectl create -f nginx-ingress-controller-service.yaml -n=ingress
