@@ -1,0 +1,32 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: goapp
+  labels:
+    app: goapp
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: goapp
+  template:
+    metadata:
+      name: goapp
+      labels: 
+         app: goapp
+    spec:
+      containers:
+      - name: goapp
+        image: jamalshahverdiev/gowebapp
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: go-service
+spec:
+  selector:
+    app: goapp
+  ports:
+    - port: 8080

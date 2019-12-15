@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: go-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: nginxingress.loc
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: go-service
+            servicePort: 8080
